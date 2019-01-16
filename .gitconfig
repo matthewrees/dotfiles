@@ -1,0 +1,7 @@
+[user]
+	name = Matthew Rees
+	email = matthew@teamrees.ca
+	signingKey = C03835F408400F46
+
+[commit]
+	gpgsign = true
