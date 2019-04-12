@@ -1,0 +1,6 @@
+.gnupg/private-keys-v1.d/
+.gnupg/pubring.kbx
+.gnupg/pubring.kbx~
+.gnupg/reader_0.status
+.gnupg/sshcontrol
+.gnupg/trustdb.gpg
