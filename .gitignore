@@ -4,3 +4,6 @@
 .gnupg/reader_0.status
 .gnupg/sshcontrol
 .gnupg/trustdb.gpg
+.gnupg/crls.d/
+.config/configstore/update-notifier-npm.json
+.config/fish/fish_variables
