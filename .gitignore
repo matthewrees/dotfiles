@@ -6,4 +6,4 @@
 .gnupg/trustdb.gpg
 .gnupg/crls.d/
 .config/configstore/update-notifier-npm.json
-.config/fish/fish_variables
+.config/configstore/update-notifier-wt-cli.json
