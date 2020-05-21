@@ -17,6 +17,7 @@ alias gs='git status'
 alias gsu='git status --untracked'
 alias gco='git checkout'
 alias ga='git add'
+alias gd='git diff'
 
 gc() { git commit -m "$*"; }
 
