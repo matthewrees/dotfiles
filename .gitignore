@@ -1,9 +1,6 @@
-.gnupg/private-keys-v1.d/
-.gnupg/pubring.kbx
-.gnupg/pubring.kbx~
-.gnupg/reader_0.status
-.gnupg/sshcontrol
-.gnupg/trustdb.gpg
-.gnupg/crls.d/
-.config/configstore/update-notifier-npm.json
-.config/configstore/update-notifier-wt-cli.json
+.gnupg/*
+!.gnuph/gpg-agent.conf
+
+.config/configstore/*
+.config/coc/*
+.config/nvim/pack/*
