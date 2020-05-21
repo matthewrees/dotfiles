@@ -18,7 +18,7 @@ alias gsu='git status --untracked'
 alias gco='git checkout'
 alias ga='git add'
 
-gc() { git commit -m "$1"; }
+gc() { git commit -m "$*"; }
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
