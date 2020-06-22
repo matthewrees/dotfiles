@@ -18,8 +18,10 @@ alias gsu='git status --untracked'
 alias gco='git checkout'
 alias ga='git add'
 alias gd='git diff'
+alias gp='git remote prune origin'
 
 gc() { git commit -m "$*"; }
+sshr() { ssh-keygen -R "$1" -f ~/.ssh/known_hosts; }
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"

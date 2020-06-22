@@ -11,17 +11,13 @@ set updatetime=300
 set shortmess+=c
 
 set smarttab
-set cindent
+"set cindent
+"set autoindent
+set smartindent
 set tabstop=2
 set shiftwidth=2
 set expandtab
 
-"set expandtab
-"set tabstop=4
-"set softtabstop=-1
-"set shiftwidth=2
-"set autoindent
-"set smartindent
 set nocompatible
 filetype plugin indent on
 
