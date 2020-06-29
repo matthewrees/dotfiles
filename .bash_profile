@@ -6,11 +6,6 @@ export PAGER=less
 export EDITOR=nvim
 export VISUAL=nvim
 
-export GPG_TTY="$(tty)"
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpgconf --launch gpg-agent
-
-alias tsh='SSH_AUTH_SOCK= tsh'
 alias ls='ls -Galh'
 alias vi='nvim'
 alias gs='git status'

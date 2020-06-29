@@ -1,9 +1,6 @@
 [user]
 	name = Matthew Rees
 	email = matthew@teamrees.ca
-	signingKey = 1899EF1AFC940B6B
 
-[commit]
-	gpgsign = true
 [pull]
 	rebase = false
