@@ -8,6 +8,6 @@ brew install yubikey-agent
 brew services start yubikey-agent
 
 brew install neovim --HEAD
-brew install zig --HEAD
+brew install zig --HEAD # https://github.com/ziglang/zig/issues/6087
 brew install starship
 brew install rectangle
