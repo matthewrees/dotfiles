@@ -1,13 +1,37 @@
 #!/usr/bin/env bash
 
-brew tap homebrew/cask-fonts
-brew cask install font-fira-code-nerd-font
+PACKAGES=("neovim --HEAD" "zig --HEAD" "starship")
+CASKS=("font-fira-code-nerd-font" "rectangle" "authy")
+TAPS=("homebrew/cask-fonts" "filippo.io/yubikey-agent")
+SERVICES=("yubikey-agent")
 
-brew tap filippo.io/yubikey-agent
-brew install yubikey-agent
-brew services start yubikey-agent
+INSTALLED_PACKAGES=$(brew list --versions)
+INSTALLED_CASKS=$(brew cask list)
+INSTALLED_TAPS=$(brew tap)
+INSTALLED_SERVICES=$(brew services)
 
-brew install neovim --HEAD
-brew install zig --HEAD # https://github.com/ziglang/zig/issues/6087
-brew install starship
-brew cask install rectangle
+for tap in "${TAPS[@]}"; do
+	if [[ ${INSTALLED_TAPS} != *"$tap"* ]]; then
+		echo brew tap $tap
+	fi
+done
+
+for cask in "${CASKS[@]}"; do
+	if [[ ${INSTALLED_CASKS} != *"$cask"* ]]; then
+		echo brew cask install $cask
+	fi
+done
+
+for package in "${PACKAGES[@]}"; do
+	temp=$(echo $package | sed 's/--//')
+	if [[ ${INSTALLED_PACKAGES} != *"$temp"* ]]; then
+		echo brew install $package
+	fi
+done
+
+for service in "${SERVICES[@]}"; do
+	if [[ ${INSTALLED_SERVICES} != *"$service"* ]]; then
+		echo brew services start $service
+	fi
+done
+
