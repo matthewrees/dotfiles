@@ -1,5 +1,4 @@
 .ssh/*
 !.ssh/config
-.config/configstore/*
-.config/coc/*
-.config/nvim/pack/*
+.Brewfile.lock.json
+
