@@ -8,6 +8,7 @@ brew "awscli"
 brew "yubikey-agent", restart_service: :changed
 brew "stow"
 brew "node"
+brew "fish"
 
 cask "font-fira-code-nerd-font"
 cask "rectangle"
