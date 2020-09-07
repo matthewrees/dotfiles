@@ -1,6 +1,9 @@
 shell:
   program: /usr/local/bin/fish
 
+window:
+  startup_mode: Maximized
+
 font:
   size: 12
   normal:
