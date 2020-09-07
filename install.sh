@@ -1,15 +1,19 @@
 #!/usr/bin/env bash
 
-DOTFILES_ROOT=$(pwd -P)
+OS_TYPE=$(uname -s)
 
-for file in $(ls -a $DOTFILES_ROOT | tail -n +3 | grep -v README.md | grep -v install.sh | grep -v .git$ | grep -v .gitignore | grep -v "brew-")
-do
-	if [[ ! -e "$HOME/$file" ]]
-	then
-		ln -s "$HOME/git/dotfiles/$file" "$HOME/$file"
-	else
-		echo "Could not link $HOME/git/dotfiles/$file as it already exists"
-	fi
+if [ "$OS_TYPE" = "Darwin" ]; then
+  if ! command -v brew >/dev/null 2>&1; then
+    echo "Installing homebrew..."
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    echo "Installing homebrew packages..."
+    brew bundle --file "$(pwd -P)/homebrew/.Brewfile"
+  else
+    brew bundle --global
+  fi
 
-	chmod 700 .gnupg
-done
+  for i in $(ls -d */); do
+    stow -t ~ ${i%%/} --ignore=".Brewfile.lock.json"
+  done
+fi
+

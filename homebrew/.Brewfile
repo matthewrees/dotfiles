@@ -11,6 +11,8 @@ brew "stow"
 cask "font-fira-code-nerd-font"
 cask "rectangle"
 cask "authy"
+cask "alacritty"
+cask "netnewswire"
 
 mas "StopTheMadness", id: 1376402589
 mas "Xcode", id: 497799835
