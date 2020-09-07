@@ -7,6 +7,7 @@ brew "starship"
 brew "awscli"
 brew "yubikey-agent", restart_service: :changed
 brew "stow"
+brew "node"
 
 cask "font-fira-code-nerd-font"
 cask "rectangle"
