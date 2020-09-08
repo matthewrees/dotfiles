@@ -9,6 +9,8 @@ brew "yubikey-agent", restart_service: :changed
 brew "stow"
 brew "node"
 brew "fish"
+brew "rust"
+brew "exa"
 
 cask "font-fira-code-nerd-font"
 cask "rectangle"
