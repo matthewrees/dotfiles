@@ -11,6 +11,7 @@ brew "node"
 brew "fish"
 brew "rust"
 brew "exa"
+brew "wget"
 
 cask "font-fira-code-nerd-font"
 cask "rectangle"
