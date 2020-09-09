@@ -12,6 +12,7 @@ brew "fish"
 brew "rust"
 brew "exa"
 brew "wget"
+brew "tmux"
 
 cask "font-fira-code-nerd-font"
 cask "rectangle"
