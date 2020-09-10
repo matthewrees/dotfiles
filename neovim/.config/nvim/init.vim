@@ -6,4 +6,5 @@ endif
 call plug#begin(stdpath('data') . '/plugged')
   Plug 'ziglang/zig.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  "Plug 'dense-analysis/ale' "linting
 call plug#end()
