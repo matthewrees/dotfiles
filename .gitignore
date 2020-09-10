@@ -1,4 +1,4 @@
+neovim/.config/coc/extensions/db.json
 .ssh/*
 !.ssh/config
 .Brewfile.lock.json
-
