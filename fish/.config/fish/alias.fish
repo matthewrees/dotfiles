@@ -1,6 +1,7 @@
 alias vim=nvim
 alias vi=nvim
 alias ls=exa
+alias cat=bat
 
 alias l='ls -l'
 alias ll='ls -la'
