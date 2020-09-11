@@ -13,6 +13,8 @@ brew "rust"
 brew "exa"
 brew "wget"
 brew "tmux"
+brew "ripgrep"
+brew "bat"
 
 cask "font-fira-code-nerd-font"
 cask "rectangle"
