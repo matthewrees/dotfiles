@@ -8,7 +8,7 @@ brew "awscli"
 brew "yubikey-agent", restart_service: :changed
 brew "stow"
 brew "node"
-brew "fish"
+brew "zsh"
 brew "rust"
 brew "exa"
 brew "wget"
@@ -17,6 +17,7 @@ brew "ripgrep"
 brew "bat"
 brew "git"
 brew "jq"
+brew "terraform@0.12"
 
 cask "font-fira-code-nerd-font"
 cask "rectangle"
@@ -24,6 +25,7 @@ cask "authy"
 cask "netnewswire"
 cask "iterm2"
 cask "pritunl"
+cask "1password-cli"
 
 mas "StopTheMadness", id: 1376402589
 mas "Xcode", id: 497799835
