@@ -1,7 +1,10 @@
+autoload -Uz compinit && compinit
+
 alias vim="nvim"
 alias vi="nvim"
 alias ls="exa"
 alias cat="bat"
+alias catp="cat -p"
 alias l="ls -l"
 alias ll="ls -la"
 alias lt="ls --tree"

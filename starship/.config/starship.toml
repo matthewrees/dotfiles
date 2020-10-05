@@ -1,0 +1,11 @@
+[ruby]
+symbol = "🔻 "
+
+[terraform]
+symbol = "🛠  "
+
+[env_var]
+variable = "GK_PROFILE"
+symbol = "🔐 "
+style = "bold yellow"
+format = "with [$symbol$env_value]($style)"
