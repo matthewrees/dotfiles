@@ -19,6 +19,14 @@ alias gp="git remote prune origin"
 alias gcm="git commit -m"
 alias sshr="ssh-keygen -f ~/.ssh/known_hosts -R"
 
+export HISTSIZE=50000
+export SAVEHIST=10000
+setopt extended_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt hist_verify
+
 export PATH="$PATH:/usr/local/opt/terraform@0.12/bin:/usr/local/bin:$HOME/.rvm/bin"
 export PAGER=less
 export EDITOR=nvim
