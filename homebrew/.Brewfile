@@ -30,8 +30,8 @@ cask "docker"
 cask "visual-studio-code"
 cask "session-manager-plugin"
 cask "fork"
+cask "1password"
 
 mas "StopTheMadness", id: 1376402589
 mas "Xcode", id: 497799835
-mas "1Password 7 - Password Manager", id: 1333542190
 mas "Tweetbot 3 for Twitter", id: 1384080005
