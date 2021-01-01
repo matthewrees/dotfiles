@@ -1,5 +1,5 @@
 tap "homebrew/cask-fonts"
-tap "filippo.io/yubikey-agent"
+tap "filippo.io/yubikey-agent" "https://filippo.io/yubikey-agent"
 
 brew "starship"
 brew "yubikey-agent", restart_service: :changed
