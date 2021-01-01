@@ -1,4 +1,4 @@
 .ssh/*
 !.ssh/config
 .Brewfile.lock.json
-neovim/.config/coc
+.idea/

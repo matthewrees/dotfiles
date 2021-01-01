@@ -1,9 +1,0 @@
-{
-    "solargraph.diagnostics": true,
-    "languageserver": {
-        "zls" : {
-            "command": "/Users/matthewrees/git/zls/zig-cache/bin/zls",
-            "filetypes": ["zig"]
-        }
-    }
-}
