@@ -1,10 +1,5 @@
 autoload -Uz compinit && compinit
 
-alias vim="nvim"
-alias vi="nvim"
-alias ls="exa"
-alias cat="bat -p"
-alias catn="bat"
 alias l="ls -l"
 alias ll="ls -la"
 alias lt="ls --tree"
@@ -27,10 +22,11 @@ setopt hist_ignore_dups
 setopt hist_ignore_space
 setopt hist_verify
 
-export PATH="$PATH:/usr/local/opt/terraform@0.12/bin:/usr/local/bin:$HOME/.rvm/bin"
 export PAGER=less
-export EDITOR=nvim
-export VISUAL=nvim
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-eval "$(starship init zsh)"
+ARCH="$(uname -m)"
+if [[ $ARCH == "arm64" ]]; then
+  export SSH_AUTH_SOCK="/opt/homebrew/var/run/yubikey-agent.sock"
+elif [[ $ARCH == "x86_64" ]]; then
+  export SSH_AUTH_SOCK="/usr/local/var/run/yubikey-agent.sock"
+fi
