@@ -5,6 +5,7 @@ RUSTUP_PATH="$HOME/.cargo/bin/rustup"
 BREWFILE_PATH="$HOME/.Brewfile"
 GIT_REPO_PATH="$HOME/git"
 REPO_NAME="dotfiles"
+LINKED_FILES=(.ssh .Brewfile .gitconfig .zshrc)
 
 if [[ $ARCH == "arm64" ]]; then
   HOMEBREW_PATH="/opt/homebrew"
@@ -39,9 +40,15 @@ if [ ! -f "$BREWFILE_PATH" ]; then
     SSH_AUTH_SOCK="$HOMEBREW_PATH/var/run/yubikey-agent.sock" git clone -q git@github.com:matthewrees/dotfiles.git "$GIT_REPO_PATH/$REPO_NAME"
   fi
   cd "$GIT_REPO_PATH/$REPO_NAME" || exit
-  rsync -avh --no-perms --exclude ".git/" --exclude ".gitignore" --exclude "README.md" --exclude "bootstrap.sh" --exclude ".idea/" --exclude "com.googlecode.iterm2.plist" . ~
+
+  for FILE in "${LINKED_FILES[@]}"; do
+    ln -sF "$GIT_REPO_PATH/$REPO_NAME/$FILE" "$HOME/$FILE"
+  done
 else
   brew bundle --global
   cd "$GIT_REPO_PATH/$REPO_NAME" || exit
-  rsync -avh --no-perms --exclude ".git/" --exclude ".gitignore" --exclude "README.md" --exclude "bootstrap.sh" --exclude ".idea/" --exclude "com.googlecode.iterm2.plist" . ~
+
+  for FILE in "${LINKED_FILES[@]}"; do
+    ln -sF "$GIT_REPO_PATH/$REPO_NAME/$FILE" "$HOME/$FILE"
+  done
 fi
