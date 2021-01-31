@@ -51,3 +51,5 @@ elif [[ $ARCH == "x86_64" ]]; then
 fi
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+eval "$(starship init zsh)"
